@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IVARIA Fresh Feet — Crème pieds bio | Boutique 1+1 Gratuit</title>
+<meta name="description" content="Fresh Feet d'IVARIA BIO : crème pieds bio hydratante & réparatrice à la noix de coco, thé vert et menthe. Offre 1 acheté = 1 offert. Paiement à la livraison partout en Algérie.">
+<meta name="theme-color" content="#1f6b86">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ============================================================
+   IVARIA BIO — Boutique (fichier unique, facile à modifier)
+   Palette et polices alignées sur la marque.
+   ============================================================ */
+:root{
+  --petrol:#1f6b86;      /* couleur principale */
+  --petrol-dark:#0f262c; /* texte foncé        */
+  --sage:#4a6664;        /* texte secondaire   */
+  --mint:#eef5f3;        /* fond clair         */
+  --orange:#ee7a4d;      /* accent / CTA       */
+  --gold:#e3a32a;        /* étoiles / badges   */
+  --line:#dfe9e6;
+  --white:#ffffff;
+  --radius:16px;
+  --shadow:0 10px 30px rgba(15,38,44,.12);
+  --maxw:1120px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:"Hanken Grotesk",system-ui,Arial,sans-serif;
+  color:var(--petrol-dark);
+  background:var(--white);
+  line-height:1.6;
+}
+h1,h2,h3,.brand{font-family:"Cairo","Hanken Grotesk",sans-serif;line-height:1.2;margin:0 0 .4em}
+h1{font-size:clamp(1.9rem,4.5vw,3rem);font-weight:800}
+h2{font-size:clamp(1.4rem,3vw,2rem);font-weight:700}
+p{margin:0 0 1em}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+section{padding:64px 0}
+
+/* --- Boutons --- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.5em;
+  font:600 1rem "Hanken Grotesk",sans-serif;
+  padding:14px 26px;border-radius:999px;border:0;cursor:pointer;
+  transition:transform .15s ease, box-shadow .15s ease, background .15s ease;
+}
+.btn:active{transform:translateY(1px)}
+.btn-primary{background:var(--orange);color:#fff;box-shadow:0 8px 20px rgba(238,122,77,.35)}
+.btn-primary:hover{background:#e3683b}
+.btn-ghost{background:transparent;color:var(--petrol);border:2px solid var(--petrol)}
+.btn-ghost:hover{background:var(--petrol);color:#fff}
+
+/* --- Header --- */
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.25rem;color:var(--petrol)}
+.brand .dot{width:34px;height:34px;border-radius:50%;background:var(--petrol);display:grid;place-items:center;color:#fff;font-size:1.1rem}
+.nav .btn{padding:10px 18px;font-size:.92rem}
+
+/* --- Bandeau promo --- */
+.promo{background:var(--petrol);color:#fff;text-align:center;font-weight:600;font-size:.92rem;padding:8px 16px}
+.promo b{color:#ffe6a8}
+
+/* --- Hero --- */
+.hero{background:linear-gradient(180deg,var(--mint),#fff)}
+.hero-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:center}
+.badge{display:inline-flex;align-items:center;gap:6px;background:#e6f4e6;color:#2c6e49;font-weight:700;font-size:.8rem;padding:6px 14px;border-radius:999px;margin-bottom:18px}
+.hero p.lead{font-size:1.12rem;color:var(--sage);max-width:46ch}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:24px}
+.stars{color:var(--gold);letter-spacing:2px}
+.proof{display:flex;gap:24px;margin-top:28px;flex-wrap:wrap}
+.proof .num{font-family:"Cairo",sans-serif;font-weight:800;font-size:1.5rem;color:var(--petrol)}
+.proof .lbl{font-size:.82rem;color:var(--sage)}
+.hero-img{position:relative}
+.hero-img .card{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:24px;text-align:center}
+.product-visual{width:100%;aspect-ratio:1/1;border-radius:var(--radius);background:
+  radial-gradient(circle at 30% 25%,#bfe6d8,transparent 60%),
+  radial-gradient(circle at 75% 75%,#cfe3ee,transparent 55%),
+  var(--mint);
+  display:grid;place-items:center;font-size:5rem;margin-bottom:16px}
+.price-row{display:flex;align-items:baseline;justify-content:center;gap:10px}
+.price{font-family:"Cairo",sans-serif;font-weight:800;font-size:2rem;color:var(--petrol)}
+.price .old{font-size:1rem;color:#9aa;text-decoration:line-through;font-weight:600}
+.tag-free{display:inline-block;margin-top:8px;background:var(--gold);color:#3a2a00;font-weight:700;padding:4px 12px;border-radius:999px;font-size:.85rem}
+
+/* --- Bandeau confiance --- */
+.trust{background:var(--petrol-dark);color:#dbe9ee}
+.trust .wrap{display:flex;justify-content:center;gap:40px;flex-wrap:wrap;text-align:center;padding:22px 20px}
+.trust .item{display:flex;align-items:center;gap:10px;font-weight:600;font-size:.95rem}
+.trust svg{width:22px;height:22px;stroke:#9fd0c4;fill:none;stroke-width:2}
+
+/* --- Avantages --- */
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.feature{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px;transition:transform .2s,box-shadow .2s}
+.feature:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.feature .ic{width:52px;height:52px;border-radius:14px;background:var(--mint);display:grid;place-items:center;font-size:1.6rem;margin-bottom:14px}
+.feature h3{font-size:1.1rem}
+.feature p{color:var(--sage);margin:0;font-size:.95rem}
+
+/* --- Étapes --- */
+.steps{background:var(--mint)}
+.steps .grid3{counter-reset:step}
+.step{text-align:center;padding:24px}
+.step .n{counter-increment:step;width:46px;height:46px;border-radius:50%;background:var(--petrol);color:#fff;display:grid;place-items:center;font-family:"Cairo";font-weight:800;margin:0 auto 14px}
+.step .n::before{content:counter(step)}
+.step p{color:var(--sage);font-size:.95rem;margin:0}
+
+/* --- Offre / commande --- */
+.order-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:40px;align-items:start}
+.offer-card{background:linear-gradient(160deg,var(--petrol),#15506a);color:#fff;border-radius:var(--radius);padding:32px;box-shadow:var(--shadow)}
+.offer-card .big{font-family:"Cairo";font-weight:800;font-size:2.4rem}
+.offer-card ul{list-style:none;padding:0;margin:18px 0 0}
+.offer-card li{padding:8px 0;border-top:1px solid rgba(255,255,255,.18);display:flex;gap:10px;align-items:center}
+.offer-card li::before{content:"✓";color:#9fe0c4;font-weight:800}
+.countdown{display:flex;gap:8px;margin-top:18px;font-family:"Cairo";font-weight:800}
+.countdown span{background:rgba(255,255,255,.15);padding:8px 12px;border-radius:10px;min-width:48px;text-align:center}
+.stock{margin-top:14px;font-size:.9rem;color:#ffe6a8}
+
+.form-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:32px;box-shadow:var(--shadow)}
+.qty{display:flex;align-items:center;gap:14px;margin:6px 0 18px}
+.qty button{width:40px;height:40px;border-radius:10px;border:1px solid var(--line);background:#fff;font-size:1.3rem;cursor:pointer}
+.qty #qty{font-family:"Cairo";font-weight:800;font-size:1.4rem;min-width:30px;text-align:center}
+.field{margin-bottom:14px}
+.field label{display:block;font-weight:600;font-size:.9rem;margin-bottom:6px}
+.field input,.field select{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:12px;font:inherit;background:#fff}
+.field input:focus,.field select:focus{outline:none;border-color:var(--petrol);box-shadow:0 0 0 3px rgba(31,107,134,.15)}
+.total{display:flex;justify-content:space-between;align-items:center;background:var(--mint);border-radius:12px;padding:14px 18px;margin:6px 0 18px;font-weight:700}
+.total .amt{font-family:"Cairo";font-weight:800;font-size:1.5rem;color:var(--petrol)}
+.cod{text-align:center;font-size:.86rem;color:var(--sage);margin-top:14px}
+#confirm-msg{display:none;margin-top:16px;background:#e6f4e6;color:#1f5132;padding:14px;border-radius:12px;font-weight:600}
+
+/* --- Avis --- */
+.reviews .grid3{align-items:start}
+.review{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px}
+.review .who{display:flex;align-items:center;gap:12px;margin-top:14px}
+.review .av{width:40px;height:40px;border-radius:50%;background:var(--mint);display:grid;place-items:center;font-weight:700;color:var(--petrol)}
+.review .who b{display:block;font-size:.92rem}
+.review .who span{font-size:.8rem;color:var(--sage)}
+
+/* --- FAQ --- */
+.faq{max-width:760px;margin:0 auto}
+.qa{border-bottom:1px solid var(--line)}
+.qa button{width:100%;background:none;border:0;text-align:left;padding:18px 0;font:600 1.05rem "Hanken Grotesk";cursor:pointer;display:flex;justify-content:space-between;align-items:center;color:var(--petrol-dark)}
+.qa .ico{color:var(--petrol);font-size:1.4rem;transition:transform .2s}
+.qa[aria-expanded="true"] .ico{transform:rotate(45deg)}
+.qa .panel{max-height:0;overflow:hidden;transition:max-height .3s ease}
+.qa .panel p{color:var(--sage);padding-bottom:18px;margin:0}
+
+/* --- Footer --- */
+footer{background:var(--petrol-dark);color:#b9cdd4;padding:48px 0 24px}
+footer .cols{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}
+footer .brand{color:#fff}
+footer a:hover{color:#fff}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.12);margin-top:28px;padding-top:18px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:.82rem}
+
+/* --- CTA flottant mobile --- */
+.float-cta{position:fixed;left:0;right:0;bottom:0;z-index:60;background:#fff;border-top:1px solid var(--line);padding:10px 16px;display:none;justify-content:space-between;align-items:center;gap:12px;box-shadow:0 -4px 20px rgba(0,0,0,.08)}
+.float-cta .p{font-family:"Cairo";font-weight:800;color:var(--petrol)}
+
+/* --- Animations reveal --- */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+
+/* --- Responsive --- */
+@media(max-width:860px){
+  .hero-grid,.order-grid{grid-template-columns:1fr}
+  .grid3{grid-template-columns:1fr}
+  .nav .btn{display:none}
+  .float-cta{display:flex}
+  body{padding-bottom:72px}
+}
+</style>
+</head>
+<body>
+
+<!-- ===================== BANDEAU PROMO ===================== -->
+<div class="promo">🎁 Offre limitée : <b>1 acheté = 1 offert</b> · Paiement à la livraison partout en Algérie</div>
+
+<!-- ===================== HEADER ===================== -->
+<header>
+  <div class="wrap nav">
+    <a href="#top" class="brand"><span class="dot">🌿</span> IVARIA <span style="color:var(--sage);font-weight:600">BIO</span></a>
+    <a href="#commander" class="btn btn-primary">Commander</a>
+  </div>
+</header>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div class="reveal">
+      <span class="badge">🌱 100% Bio &amp; Naturel</span>
+      <h1>Fresh Feet — la crème pieds bio qui hydrate, répare &amp; rafraîchit</h1>
+      <p class="lead">À la noix de coco, thé vert et menthe. Des pieds doux, réparés et frais dès la première semaine. Fabriquée avec des ingrédients naturels.</p>
+      <div class="stars">★★★★★ <span style="color:var(--sage);font-size:.9rem">4,9/5 · +2 000 clients satisfaits</span></div>
+      <div class="hero-cta">
+        <a href="#commander" class="btn btn-primary">Je commande maintenant</a>
+        <a href="#avantages" class="btn btn-ghost">Découvrir les bienfaits</a>
+      </div>
+      <div class="proof">
+        <div><div class="num" data-count="2000" data-prefix="+">+0</div><div class="lbl">Clients livrés</div></div>
+        <div><div class="num">58</div><div class="lbl">Wilayas livrées</div></div>
+        <div><div class="num">24-72h</div><div class="lbl">Délai de livraison</div></div>
+      </div>
+    </div>
+    <div class="hero-img reveal">
+      <div class="card">
+        <div class="product-visual">🦶✨</div>
+        <h3 style="color:var(--petrol)">IVARIA Fresh Feet</h3>
+        <p style="color:var(--sage);margin:.2em 0 1em">Crème pieds bio · 1+1 Gratuit</p>
+        <div class="price-row">
+          <span class="price">2 900 DA</span>
+          <span class="old">5 800 DA</span>
+        </div>
+        <span class="tag-free">2 pots pour le prix d'un</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== BANDEAU CONFIANCE ===================== -->
+<div class="trust">
+  <div class="wrap">
+    <div class="item"><svg viewBox="0 0 24 24"><rect x="3" y="6" width="14" height="11" rx="2"/><path d="M17 9h3l1 4v3h-4"/></svg> Paiement à la livraison</div>
+    <div class="item"><svg viewBox="0 0 24 24"><path d="M3 12l9-9 9 9"/><path d="M5 10v10h14V10"/></svg> Livraison 58 wilayas</div>
+    <div class="item"><svg viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4 2 7L12 16l-6.5 4 2-7L2 9h7z"/></svg> 100% ingrédients bio</div>
+  </div>
+</div>
+
+<!-- ===================== AVANTAGES ===================== -->
+<section id="avantages">
+  <div class="wrap">
+    <div style="text-align:center;max-width:600px;margin:0 auto 40px" class="reveal">
+      <h2>Pourquoi vous allez l'adorer</h2>
+      <p style="color:var(--sage)">Une formule bio pensée pour les pieds secs, fatigués et abîmés.</p>
+    </div>
+    <div class="grid3">
+      <div class="feature reveal"><div class="ic">💧</div><h3>Hydratation intense</h3><p>La noix de coco nourrit en profondeur les peaux sèches et les talons crevassés.</p></div>
+      <div class="feature reveal"><div class="ic">🌿</div><h3>Réparation naturelle</h3><p>Le thé vert apaise, régénère et adoucit la peau abîmée jour après jour.</p></div>
+      <div class="feature reveal"><div class="ic">❄️</div><h3>Fraîcheur immédiate</h3><p>La menthe procure une sensation de fraîcheur et soulage les pieds fatigués.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ÉTAPES ===================== -->
+<section class="steps">
+  <div class="wrap">
+    <div style="text-align:center;margin-bottom:30px" class="reveal"><h2>Commander en 3 étapes simples</h2></div>
+    <div class="grid3">
+      <div class="step reveal"><div class="n"></div><h3>Remplissez le formulaire</h3><p>Nom, téléphone et wilaya — c'est tout.</p></div>
+      <div class="step reveal"><div class="n"></div><h3>Nous vous appelons</h3><p>Confirmation de votre commande par téléphone.</p></div>
+      <div class="step reveal"><div class="n"></div><h3>Recevez &amp; payez</h3><p>Paiement à la livraison, directement chez vous.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== OFFRE + COMMANDE ===================== -->
+<section id="commander">
+  <div class="wrap order-grid">
+    <!-- Carte offre -->
+    <div class="offer-card reveal">
+      <span class="tag-free">Offre du jour</span>
+      <div class="big" style="margin-top:10px">1 acheté = 1 offert</div>
+      <p style="opacity:.9;margin-top:6px">Recevez <b>2 pots</b> de crème Fresh Feet pour seulement <b>2 900 DA</b>.</p>
+      <ul>
+        <li>2 pots livrés (1+1 gratuit)</li>
+        <li>Paiement à la livraison — aucune carte requise</li>
+        <li>Livraison dans les 58 wilayas</li>
+        <li>Formule 100% bio</li>
+      </ul>
+      <p style="margin-top:18px;font-weight:600">⏳ L'offre se termine dans :</p>
+      <div class="countdown" id="cd"><span>00</span><span>00</span><span>00</span></div>
+      <div class="stock">🔥 Plus que <b id="stockLeft">12</b> offres disponibles aujourd'hui</div>
+    </div>
+
+    <!-- Formulaire -->
+    <div class="form-card reveal">
+      <h2>Vos informations de livraison</h2>
+      <p style="color:var(--sage);font-size:.92rem">Livraison partout en Algérie · Paiement à la livraison</p>
+
+      <label style="font-weight:600;font-size:.9rem">Quantité (lots de 1+1)</label>
+      <div class="qty">
+        <button type="button" onclick="changeQty(-1)" aria-label="Réduire">−</button>
+        <span id="qty">1</span>
+        <button type="button" onclick="changeQty(1)" aria-label="Augmenter">+</button>
+      </div>
+
+      <div class="field"><label for="nom">Nom complet *</label><input id="nom" type="text" placeholder="Votre nom"></div>
+      <div class="field"><label for="tel">Téléphone *</label><input id="tel" type="tel" inputmode="tel" placeholder="0X XX XX XX XX"></div>
+      <div class="field"><label for="wilaya">Wilaya *</label><select id="wilaya"><option value="">Choisir…</option></select></div>
+      <div class="field"><label for="commune">Commune / Adresse</label><input id="commune" type="text" placeholder="Votre commune"></div>
+
+      <div class="total"><span>Total à payer</span><span class="amt"><span id="total">2 900</span> DA</span></div>
+
+      <button type="button" class="btn btn-primary" style="width:100%" onclick="confirmer()">✅ Confirmer ma commande</button>
+      <div class="cod">🔒 Aucune carte requise — vous payez en espèces à la livraison</div>
+      <div id="confirm-msg"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== AVIS ===================== -->
+<section class="reviews" style="background:var(--mint)">
+  <div class="wrap">
+    <div style="text-align:center;margin-bottom:30px" class="reveal"><h2>Ce que disent nos clientes</h2><div class="stars">★★★★★</div></div>
+    <div class="grid3">
+      <div class="review reveal"><div class="stars">★★★★★</div><p>« Mes talons étaient très secs, après une semaine c'est le jour et la nuit. L'odeur de menthe est top ! »</p><div class="who"><div class="av">A</div><div><b>Amel</b><span>Alger</span></div></div></div>
+      <div class="review reveal"><div class="stars">★★★★★</div><p>« Produit naturel et efficace, livraison rapide et paiement à la réception. Je recommande. »</p><div class="who"><div class="av">S</div><div><b>Sofiane</b><span>Oran</span></div></div></div>
+      <div class="review reveal"><div class="stars">★★★★★</div><p>« L'offre 1+1 est parfaite, j'en ai gardé un et offert l'autre à ma mère. Très satisfaite. »</p><div class="who"><div class="av">N</div><div><b>Nadia</b><span>Constantine</span></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FAQ ===================== -->
+<section>
+  <div class="wrap faq">
+    <h2 style="text-align:center;margin-bottom:24px" class="reveal">Questions fréquentes</h2>
+    <div class="qa reveal"><button type="button">Combien de temps dure la livraison ?<span class="ico">+</span></button><div class="panel"><p>En général 24 à 72 heures selon votre wilaya. Nous livrons dans les 58 wilayas d'Algérie.</p></div></div>
+    <div class="qa reveal"><button type="button">Comment se passe le paiement ?<span class="ico">+</span></button><div class="panel"><p>Le paiement se fait en espèces à la livraison (paiement à la réception). Aucune carte bancaire n'est nécessaire.</p></div></div>
+    <div class="qa reveal"><button type="button">Le produit est-il vraiment bio ?<span class="ico">+</span></button><div class="panel"><p>Oui, Fresh Feet est formulée avec des ingrédients naturels : noix de coco, thé vert et menthe.</p></div></div>
+    <div class="qa reveal"><button type="button">Que comprend l'offre 1+1 ?<span class="ico">+</span></button><div class="panel"><p>Pour un lot acheté (2 900 DA), vous recevez 2 pots de crème : 1 acheté + 1 offert.</p></div></div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div style="max-width:280px">
+        <div class="brand" style="font-size:1.3rem">🌿 IVARIA BIO</div>
+        <p style="margin-top:10px">Cosmétiques bio &amp; naturels. Des soins efficaces, livrés chez vous partout en Algérie.</p>
+      </div>
+      <div>
+        <h3 style="color:#fff;font-size:1rem">Liens</h3>
+        <p><a href="#avantages">Bienfaits</a><br><a href="#commander">Commander</a><br><a href="#top">Accueil</a></p>
+      </div>
+      <div>
+        <h3 style="color:#fff;font-size:1rem">Contact</h3>
+        <p><a id="wa-link" href="#">📱 WhatsApp</a><br>Paiement à la livraison<br>Livraison 58 wilayas</p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 IVARIA Bio. Tous droits réservés.</span>
+      <span>Paiement à la livraison · Livraison 58 wilayas</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ===================== CTA FLOTTANT MOBILE ===================== -->
+<div class="float-cta">
+  <div><div class="p">2 900 DA</div><div style="font-size:.78rem;color:var(--sage)">1+1 Gratuit</div></div>
+  <a href="#commander" class="btn btn-primary" style="flex:1">Commander</a>
+</div>
+
+<!-- ===================== DONNÉES STRUCTURÉES SEO ===================== -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Product","name":"IVARIA Fresh Feet — Crème pieds bio","brand":{"@type":"Brand","name":"IVARIA BIO"},"description":"Crème pieds bio hydratante, réparatrice et fraîcheur à la noix de coco, thé vert et menthe.","offers":{"@type":"Offer","price":"2900","priceCurrency":"DZD","availability":"https://schema.org/InStock"}}
+</script>
+
+<script>
+/* ============================================================
+   CONFIGURATION — modifiez ces valeurs facilement
+   ============================================================ */
+const CONFIG = {
+  WHATSAPP:   "213000000000",  // votre n° WhatsApp international, sans + ni 0. Ex: 213655123456
+  PRIX_LOT:   2900,            // prix d'un lot (1+1) en DA
+  STOCK_LEFT: 12,              // nombre d'offres affiché
+  PRODUIT:    "IVARIA Fresh Feet (1+1 gratuit)"
+};
+
+/* Liste des 58 wilayas d'Algérie */
+const WILAYAS = ["Adrar","Chlef","Laghouat","Oum El Bouaghi","Batna","Béjaïa","Biskra","Béchar","Blida","Bouira","Tamanrasset","Tébessa","Tlemcen","Tiaret","Tizi Ouzou","Alger","Djelfa","Jijel","Sétif","Saïda","Skikda","Sidi Bel Abbès","Annaba","Guelma","Constantine","Médéa","Mostaganem","M'Sila","Mascara","Ouargla","Oran","El Bayadh","Illizi","Bordj Bou Arréridj","Boumerdès","El Tarf","Tindouf","Tissemsilt","El Oued","Khenchela","Souk Ahras","Tipaza","Mila","Aïn Defla","Naâma","Aïn Témouchent","Ghardaïa","Relizane","Timimoun","Bordj Badji Mokhtar","Ouled Djellal","Béni Abbès","In Salah","In Guezzam","Touggourt","Djanet","El M'Ghair","El Meniaa"];
+
+/* ---- Init : wilayas + lien WhatsApp + stock ---- */
+const sel = document.getElementById('wilaya');
+WILAYAS.forEach(w => { const o = document.createElement('option'); o.value = o.textContent = w; sel.appendChild(o); });
+document.getElementById('stockLeft').textContent = CONFIG.STOCK_LEFT;
+document.getElementById('wa-link').href = 'https://wa.me/' + CONFIG.WHATSAPP;
+
+/* ---- Quantité + total ---- */
+let qty = 1;
+const fmt = n => n.toLocaleString('fr-FR').replace(/ /g, ' ');
+function renderTotal(){
+  document.getElementById('qty').textContent = qty;
+  document.getElementById('total').textContent = fmt(CONFIG.PRIX_LOT * qty);
+}
+function changeQty(d){ qty = Math.max(1, qty + d); renderTotal(); }
+renderTotal();
+
+/* ---- Confirmation commande → WhatsApp ---- */
+function confirmer(){
+  const nom    = document.getElementById('nom').value.trim();
+  const tel    = document.getElementById('tel').value.trim();
+  const wilaya = document.getElementById('wilaya').value;
+  const commune= document.getElementById('commune').value.trim();
+  if(!nom || !tel || !wilaya){ alert("Merci de renseigner votre nom, téléphone et wilaya."); return; }
+
+  const total = CONFIG.PRIX_LOT * qty;
+  const box = document.getElementById('confirm-msg');
+  box.style.display = 'block';
+  box.textContent = 'Merci ' + nom + ' ! Ouverture de WhatsApp pour confirmer votre commande…';
+
+  const msg =
+`Nouvelle commande — ${CONFIG.PRODUIT}
+Nom : ${nom}
+Téléphone : ${tel}
+Wilaya : ${wilaya}
+Commune : ${commune || '-'}
+Quantité : ${qty} lot(s) = ${qty*2} pots
+Total : ${fmt(total)} DA (paiement à la livraison)`;
+
+  window.open('https://wa.me/' + CONFIG.WHATSAPP + '?text=' + encodeURIComponent(msg), '_blank');
+}
+
+/* ---- Compte à rebours (fin de journée) ---- */
+(function(){
+  const el = document.getElementById('cd').children;
+  function tick(){
+    const now = new Date(), end = new Date(); end.setHours(23,59,59,999);
+    let s = Math.max(0, Math.floor((end - now) / 1000));
+    el[0].textContent = String(Math.floor(s/3600)).padStart(2,'0');
+    el[1].textContent = String(Math.floor(s%3600/60)).padStart(2,'0');
+    el[2].textContent = String(s%60).padStart(2,'0');
+  }
+  tick(); setInterval(tick, 1000);
+})();
+
+/* ---- FAQ accordéon ---- */
+document.querySelectorAll('.qa button').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const qa = btn.parentElement;
+    const open = qa.getAttribute('aria-expanded') === 'true';
+    qa.setAttribute('aria-expanded', !open);
+    const panel = qa.querySelector('.panel');
+    panel.style.maxHeight = open ? null : panel.scrollHeight + 'px';
+  });
+});
+
+/* ---- Compteurs animés ---- */
+function countUp(elm){
+  const target = +elm.dataset.count, prefix = elm.dataset.prefix || '', t0 = performance.now();
+  (function step(t){
+    const p = Math.min(1, (t - t0) / 1400);
+    elm.textContent = prefix + Math.floor((1 - Math.pow(1-p,3)) * target).toLocaleString('fr-FR').replace(/ /g,' ');
+    if(p < 1) requestAnimationFrame(step);
+  })(t0);
+}
+
+/* ---- Reveal au scroll ---- */
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if(e.isIntersecting){
+      e.target.classList.add('in');
+      if(e.target.dataset.count) countUp(e.target);
+      io.unobserve(e.target);
+    }
+  });
+}, {threshold:.15});
+document.querySelectorAll('.reveal, [data-count]').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
